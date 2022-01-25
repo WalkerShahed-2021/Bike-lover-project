@@ -6,13 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 
 const Navigation = () => {
-
+    const { user, logOut } = useAuth()
     return (
-        <Box  sx={{ flexGrow: 1 ,}}>
-            <AppBar position="static">
+        <Box sx={{ flexGrow: 1, }}>
+            <AppBar  position="fixed">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -27,7 +28,19 @@ const Navigation = () => {
                     </Typography>
                     <Link style={{ textDecoration: 'none', color: 'white', }} to="/home"><Button color="inherit">Home</Button></Link>
                     <Link style={{ textDecoration: 'none', color: 'white', }} to="/Explore"><Button color="inherit">Explore</Button></Link>
-                    <Link style={{ textDecoration: 'none', color: 'white', }} to="/login"><Button color="inherit">Login</Button></Link>
+
+                    {
+                        user?.email ?
+                            <Box>
+                                <Link style={{ textDecoration: 'none', color: 'white', }} to="/Dashboard"><Button color="inherit">Dashboard</Button></Link>
+                                <Link onClick={logOut} style={{ textDecoration: 'none', color: 'white', }} to="/login"><Button style={{ backgroundColor: 'red' }} variant='contained' color="inherit">logout</Button></Link>
+                            </Box>
+
+                            : <Link style={{ textDecoration: 'none', color: 'white', }} to="/login"><Button color="inherit">login</Button></Link>
+
+                    }
+                   
+
                 </Toolbar>
             </AppBar>
         </Box>

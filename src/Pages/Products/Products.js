@@ -2,7 +2,6 @@ import { Container, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Product from './Product/Product';
-import Explore from '../Explore/Explore';
 
 
 
@@ -11,10 +10,11 @@ const Products = () => {
 
 
     useEffect(() => {
-        fetch('./products.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [])
+    },[]);
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Container>

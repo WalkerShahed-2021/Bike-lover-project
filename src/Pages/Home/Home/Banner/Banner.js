@@ -19,7 +19,7 @@ const BannerBg = {
 const Banner = () => {
     return (
         <Box style={BannerBg} sx={{ flexGrow: 1}}>
-            <Container>
+            <Container data-aos="fade-left">
                 <Grid container spacing={2} style={{ marginTop: '2px' }}>
                     <Grid item xs={6} md={6} sx={{
                         display: 'flex',
@@ -27,10 +27,10 @@ const Banner = () => {
                         alignItems: 'center',
                         justifyContent: 'flex-start'
                     }}>
-                        <Typography sx={{ color: 'white', textAlign: 'center', marginTop: '100px' }}>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum reprehenderit, vitae blanditiis, inventore eligendi at odit adipisci alias animi tempora esse ea eaque fugit officiis aliquid dolore, ad rem laudantium.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum reprehenderit, vitae blanditiis, inventore eligendi at odit adipisci alias animi tempora esse ea eaque fugit officiis aliquid dolore, ad rem laudantium.
+                        <Typography sx={{ color: 'white', textAlign: 'center', marginTop: '100px' }} data-aos="fade-left">
+                             sit amet consectetur, adipisicing elit. Cum reprehenderit, vitae blanditiis, inventore eligendi at odit adipisci alias animi tempora esse ea eaque fugit officiis aliquid dolore, ad rem laudantium.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum reprehenderit, vitae blanditiis, inventore eligendi at odit adipisci alias animi tempora esse ea eaque fugit officiis aliquid dolore, ad rem laudantium.
                             <br /> <br />
-                            <Button variant="contained">Learn More</Button>
+                            <Button data-aos="fade-left" variant="contained">Learn More</Button>
                       </Typography>
                     </Grid>
                     <Grid item xs={6} md={6} sx={{

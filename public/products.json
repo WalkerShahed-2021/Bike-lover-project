@@ -3,36 +3,42 @@
         "name": "Road Prince RX3 250",
         "discription": "Some names are creative but difficult to understand and memorize. Although they looks cool, they should be ignored. This is because they arent memorable. People try to avoid all the names that include hard to spell words.",
         "price": 2554,
-        "img": "https://i.ibb.co/WV9Cp9M/img-10.jpg"
+        "img": "https://i.ibb.co/WV9Cp9M/img-10.jpg",
+         "id": 1
     },
     {
         "name": "Fighter",
         "discription": "Have you ever tried coming up with a good name for a character in your favorite book series? If youre like, me, then youve probably spent hours trying to come up with a good name, but you still end up with the same boring name every time.",
         "price": 8679,
-        "img": "https://i.ibb.co/K9vMJqn/img-7.jpg"
+        "img": "https://i.ibb.co/K9vMJqn/img-7.jpg",
+        "id": 2
     },
     {
         "name": "Beagle (BSA)",
         "discription": "Im here to help you with that problem. Ive collected some catchy names from different sources, including novels, movies and comics, which you can use to come up with a name for your characters in your favorite book series.",
         "price": 5246,
-        "img": "https://i.ibb.co/v3gtJC4/img-4.jpg"
+        "img": "https://i.ibb.co/v3gtJC4/img-4.jpg",
+        "id": 3
       },
       {
         "name": "Benelli TNT 150i",
         "discription": "Names that are short and sweet are usually memorable too. To make a name memorable, make sure it is easy to understand and say aloud. When a name is easy to understand, it automatically fits in the sub-conscious mind of people and thus cratering a memory in their mind.",
         "price": 9865,
-        "img": "https://i.ibb.co/qrgWmfZ/img-8.jpg"
+        "img": "https://i.ibb.co/qrgWmfZ/img-8.jpg",
+        "id": 4
       },
       {
         "name": "Super Hawk (Honda)",
         "discription": "Some names are creative but difficult to understand and memorize. Although they looks cool, they should be ignored. This is because they arent memorable. People try to avoid all the names that include hard to spell words.",
         "price": 7857,
-        "img": "https://i.ibb.co/MnpXkwt/img-9.jpg"
+        "img": "https://i.ibb.co/MnpXkwt/img-9.jpg",
+        "id": 5
       },
       {
         "name": "Keeway SUPERLIGHT 200",
         "discription": "Some names are creative but difficult to understand and memorize. Although they looks cool, they should be ignored. This is because they arent memorable. People try to avoid all the names that include hard to spell words.",
         "price": 4575,
-        "img": "https://i.ibb.co/WV9Cp9M/img-10.jpg"
+        "img": "https://i.ibb.co/WV9Cp9M/img-10.jpg",
+        "id": 6
       }
 ]
