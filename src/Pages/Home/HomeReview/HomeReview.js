@@ -12,7 +12,7 @@ const HomeReview = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/Review')
+        fetch('https://murmuring-cove-61906.herokuapp.com/Review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -27,14 +27,14 @@ const HomeReview = () => {
         <Container>
             <h1 style={{ marginTop: '50px', textAlign: 'center' }}>Customer Review !!!!!</h1>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    {singleReview.map((oneReview, index) => (
-                        <Grid item xs={4} sm={4} md={4} key={index}>
-                            <DisplayReview
-                             oneReview={oneReview}
-                            ></DisplayReview>
-                        </Grid>
-                    ))}
-                </Grid>
+                {singleReview.map((oneReview, index) => (
+                    <Grid item xs={4} sm={4} md={4} key={index}>
+                        <DisplayReview
+                            oneReview={oneReview}
+                        ></DisplayReview>
+                    </Grid>
+                ))}
+            </Grid>
         </Container>
     );
 };

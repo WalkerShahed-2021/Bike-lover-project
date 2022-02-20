@@ -7,19 +7,19 @@ const ManageProducts = () => {
     console.log(manyProduct);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manyProducts')
-        .then(res => res.json())
-        .then(data => setManyProduct(data))
-    },[])
+        fetch('https://murmuring-cove-61906.herokuapp.com/manyProducts')
+            .then(res => res.json())
+            .then(data => setManyProduct(data))
+    }, [])
     return (
         <div>
             <Container>
                 <Typography sx={{ fontWeight: 'bold', mt: '40px', color: 'green' }} variant='h4'>
-                   Manage Products----
+                    Manage Products----
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {manyProduct.length === 0 ?
-                          <CircularProgress />
+                        <CircularProgress />
                         :
                         manyProduct.map(product => <SeeManyProduct
                             key={product.id}

@@ -5,7 +5,7 @@ const SeeOrder = ({ user }) => {
     const { firstName, price, address, phone, _id, img } = user;
 
     const handleDeletedProduct = id => {
-        const uri = `http://localhost:5000/Buyer/${id}`;
+        const uri = `https://murmuring-cove-61906.herokuapp.com/Buyer/${id}`;
         fetch(uri, {
             method: 'DELETE',
         })

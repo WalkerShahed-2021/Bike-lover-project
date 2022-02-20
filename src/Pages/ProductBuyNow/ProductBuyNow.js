@@ -8,14 +8,14 @@ import Navigation from '../Shared/Navigation/Navigation';
 
 const ProductBuyNow = () => {
     const { ProductId } = useParams();
-    const {user} = useAuth();
+    const { user } = useAuth();
     const [products, setProducts] = useState([]);
     const [singleProduct, setSingleProduct] = useState([]);
 
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/manyProducts')
+        fetch('https://murmuring-cove-61906.herokuapp.com/manyProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -32,21 +32,21 @@ const ProductBuyNow = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-    //  console.log(singleProduct[0])
-     const newProduct = {...data, ...singleProduct[0]}
-        axios.post('http://localhost:5000/Buyer', newProduct)
+        //  console.log(singleProduct[0])
+        const newProduct = { ...data, ...singleProduct[0] }
+        axios.post('https://murmuring-cove-61906.herokuapp.com/Buyer', newProduct)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
                     console.log(data);
-                 reset();
+                    reset();
                 }
-            }) 
+            })
     };
 
     return (
         <>
-        <Navigation></Navigation>
+            <Navigation></Navigation>
             <Typography variant='h4' sx={{ fontWeight: 'bold', textAlign: 'center', marginTop: '20px', color: 'green' }}>
                 Buy Your Favorite Bike!!!!!!
             </Typography>
@@ -62,7 +62,7 @@ const ProductBuyNow = () => {
                                     <Box sx={{ boxShadow: 1, backgroundColor: '#3b5998', p: 2 }}>
                                         <img style={{ width: '100%' }} className="w-25" src={singleProduct[0]?.img} alt="" />
                                         <h1 style={{ textAlign: 'center' }} className="mt-4">{singleProduct[0]?.name}</h1>
-                                        <h2 style={{color: 'green', textAlign: 'center' }}>Price: ${singleProduct[0]?.price}</h2>
+                                        <h2 style={{ color: 'green', textAlign: 'center' }}>Price: ${singleProduct[0]?.price}</h2>
                                         <p>{singleProduct[0]?.discription}</p>
                                     </Box>
                                 </Grid>
